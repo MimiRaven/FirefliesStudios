@@ -728,7 +728,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OptionstoMainScreen
         m_Mode: 1
         m_Arguments:
@@ -862,7 +862,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadCreditScreen
         m_Mode: 1
         m_Arguments:
@@ -996,7 +996,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadAboutScreen
         m_Mode: 1
         m_Arguments:
@@ -1295,7 +1295,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ControlstoAbout
         m_Mode: 1
         m_Arguments:
@@ -1742,7 +1742,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadOptionsScreen
         m_Mode: 1
         m_Arguments:
@@ -1876,7 +1876,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -2096,7 +2096,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 707229508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 438da3a6d7a8d6a42ba5af7abdd953f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 28133ea31af05104da1cbf6250d67f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aboutScreen: {fileID: 449654481}
@@ -2256,7 +2256,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: CreditstoAbout
         m_Mode: 1
         m_Arguments:
@@ -2527,7 +2527,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadControlsScreen
         m_Mode: 1
         m_Arguments:
@@ -3482,7 +3482,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -3616,7 +3616,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707229514}
-        m_TargetAssemblyTypeName: MenuOption, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: AbouttoMainScreen
         m_Mode: 1
         m_Arguments:

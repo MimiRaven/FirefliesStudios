@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuOption : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     public GameObject aboutScreen;
     public GameObject creditScreen;
@@ -20,12 +20,13 @@ public class MenuOption : MonoBehaviour
         creditScreen.SetActive(false);
         controlScreen.SetActive(false);
         optionScreen.SetActive(false);
+        mainScreen.SetActive(true);
         animator = GetComponent<Animator>();
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("FinalScene");
+        SceneManager.LoadScene("Final Level");
     }
 
     public void LoadAboutScreen()
