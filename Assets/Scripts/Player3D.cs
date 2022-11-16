@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Player3D : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Player3D : MonoBehaviour
     private Rigidbody rb;
     public float speed = 7;
     bool enableMove = true;
+    Vector3 lookDirection = Vector3.forward;
 
     // Projectile
     public GameObject projectileObject;
@@ -33,7 +35,7 @@ public class Player3D : MonoBehaviour
     {
         Projectile p = projectileObject.GetComponent<Projectile>();
 
-        Instantiate(p);
+        Instantiate(p, rb.position + lookDirection * 0.5f, Quaternion.identity);
     }
 
     void FixedUpdate()
