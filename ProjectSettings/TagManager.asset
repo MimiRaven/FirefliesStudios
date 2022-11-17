@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
+  - RotateLeft1
+  - RotateLeft2
+  - RotateLeft3
+  - RotateLeft4
+  - RotateRight1
+  - RotateRight2
+  - RotateRight3
+  - RotateRight4
   layers:
   - Default
   - TransparentFX
@@ -13,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Projectile
-  - 
+  - Ground
   - 
   - 
   - 
