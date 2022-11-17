@@ -123,11 +123,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &147374051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8610516229282983921, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+  m_PrefabInstance: {fileID: 8610516228982279634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &303850026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8610516229282983928, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
   m_PrefabInstance: {fileID: 8610516228982279634}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &303850033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147374051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7012752c4bd00d49a1723b4a91d49e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
 --- !u!1 &887116733
 GameObject:
   m_ObjectHideFlags: 3
@@ -628,6 +646,46 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: d1eb4e0de6bce32419fbd069ddf45fcd, type: 3}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: WASD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: c902669b-acaa-4ac2-9609-d4b386b81230
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: ff3a174b-ae9b-4067-929a-6e9f4b88e382
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 9a951f7d-a3bd-476f-815f-17ba4e4d254b
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: WASD/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: WASD/Shooting[/Mouse/leftButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610516229282983927, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: WASD/Jump[/Keyboard/space]
+      objectReference: {fileID: 0}
     - target: {fileID: 8610516229282983928, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -672,5 +730,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8610516229282983929, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b033a5d2193e484096e25518d7e02d0, type: 3}

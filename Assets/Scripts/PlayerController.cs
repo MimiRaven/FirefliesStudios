@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     private Vector2 movement;
     private Rigidbody rb;
-    public int speed = 5;
+    public int speed = 7;
 
     private PlayerInput playerInput;
     private InputAction JumpAction;
+
+    //Vector2 lookDirection = Vector2.forward;
 
     bool enableMove = true;
 
@@ -35,6 +37,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnShooting()
+    {
+        //Projectile p = projectileObject.GetComponent<Projectile>();
+
+        //Instantiate(p, rb.position + lookDirection * 0.5f, Quaternion.identity);
+    }
+
     void FixedUpdate()
     {
         if (enableMove == true && movement.x != 0 || movement.y != 0)
@@ -42,4 +51,5 @@ public class PlayerController : MonoBehaviour
             rb.velocity = movement * speed;
         }
     }
+
 }
