@@ -506,22 +506,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Art/Collectible
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Art/Collectible
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ester\Desktop\Uni Stuff\firefly\FirefliesStudios
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 114.20001}
-    m_SelectedIDs: a0630000
-    m_LastClickedID: 25504
-    m_ExpandedIDs: 000000005a6300009663000000ca9a3b
+    scrollPos: {x: 0, y: 2.2000122}
+    m_SelectedIDs: 04610000
+    m_LastClickedID: 24836
+    m_ExpandedIDs: 00000000a0600000de60000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -549,7 +549,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a630000
+    m_ExpandedIDs: 00000000a0600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -677,9 +677,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8630000
+      m_SelectedIDs: 12610000
       m_LastClickedID: 0
-      m_ExpandedIDs: aaf4ffffe2f5ffff66f8ffff
+      m_ExpandedIDs: 1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -5, y: 4.5, z: 5}
     speed: 2
-    m_Value: {x: 29.733067, y: 65.68056, z: -2.7178497}
+    m_Value: {x: -5, y: 4.5, z: 5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -979,11 +979,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.028805582, y: 0.004494128, z: -0.00012932984, w: 0.9995791}
     speed: 2
-    m_Value: {x: -0.07557591, y: 0.085046686, z: -0.006247392, w: -0.9936071}
+    m_Value: {x: -0.028805584, y: -0.0044941283, z: 0.00012932984, w: -0.99957913}
   m_Size:
     m_Target: 36.796085
     speed: 2
-    m_Value: 38.529934
+    m_Value: 36.796085
   m_Ortho:
     m_Target: 0
     speed: 2
