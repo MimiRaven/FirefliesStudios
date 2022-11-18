@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4858b646138af4bb4d4d260f55f93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 30
   TurnLeft1: {fileID: 1455669626}
   TurnLeft2: {fileID: 1925945104}
   TurnLeft3: {fileID: 104848244}
