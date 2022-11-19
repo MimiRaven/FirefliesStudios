@@ -13,6 +13,7 @@ TagManager:
   - RotateRight2
   - RotateRight3
   - RotateRight4
+  - Collectible
   layers:
   - Default
   - TransparentFX

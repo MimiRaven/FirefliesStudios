@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     Rigidbody rb;
+    public Vector3 direction;
 
     void Awake()
     {
@@ -12,7 +13,8 @@ public class Projectile : MonoBehaviour
     }
 
     void Update()
-    {
-        rb.AddForce(0,5,5 * 20);
+    { 
+        rb.AddForce(new Vector3 (direction.x, direction.y + 0.5f, direction.z) * 50f);
+        Destroy(gameObject, 1f);
     }
 }

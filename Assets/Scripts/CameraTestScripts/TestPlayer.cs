@@ -7,6 +7,7 @@ public class TestPlayer : MonoBehaviour
     public float runSpeed;
 
     Rigidbody rigidbody;
+    Vector3 lookDirection = Vector3.left;
 
     bool grounded = false;
     Collider[] groundCollisions;
@@ -15,6 +16,9 @@ public class TestPlayer : MonoBehaviour
     public Transform groundCheck;
     public float jumpHeight;
 
+    public GameObject projectileObject;
+    public float shootCooldownTimer = 2;
+    public bool shootCooldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,15 @@ public class TestPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (shootCooldown)
+        {
+            shootCooldownTimer -= Time.deltaTime;
+            if (shootCooldownTimer <= 0 )
+            {
+                shootCooldownTimer = 2;
+                shootCooldown = false;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -42,6 +54,19 @@ public class TestPlayer : MonoBehaviour
         float move = Input.GetAxis("Horizontal");
 
         rigidbody.velocity = new Vector3(move * runSpeed, rigidbody.velocity.y, 0);
+
+        lookDirection.x = move;
+
+        if (shootCooldown == false && Input.GetAxis("Fire1") > 0)
+        {
+            if (lookDirection.x > 0 || lookDirection.x < 0)
+            {
+                Projectile p = projectileObject.GetComponent<Projectile>();
+                p.direction = lookDirection;
+                Instantiate(p, rigidbody.position + lookDirection * 2f, Quaternion.identity);
+                shootCooldown = true;
+            }
+        }
     }
 
     void OnTriggerEnter(Collider x)
@@ -72,6 +97,11 @@ public class TestPlayer : MonoBehaviour
             case "RotateRight4":
                 FindObjectOfType<Turntable>().RotateRight4();
                 break;
+        }
+
+        if (x.CompareTag("Collectible"))
+        {
+            Destroy(x.gameObject);
         }
     }
 }
