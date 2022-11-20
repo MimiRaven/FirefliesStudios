@@ -15,6 +15,7 @@ TagManager:
   - RotateRight4
   - Collectible
   - Enemy
+  - Boss
   layers:
   - Default
   - TransparentFX
