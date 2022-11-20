@@ -19,10 +19,18 @@ public class TestPlayer : MonoBehaviour
     public GameObject projectileObject;
     public float shootCooldownTimer = 2;
     public bool shootCooldown;
+
+    AudioSource audioSource;
+
+    public AudioClip jumpSound;
+    public AudioClip shootSound;
+    public AudioClip pickupSound;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +53,8 @@ public class TestPlayer : MonoBehaviour
         {
             grounded = false;
             rigidbody.AddForce(new Vector3(0, jumpHeight, 0));
+            audioSource.clip = jumpSound;
+            audioSource.Play();
         }
 
         groundCollisions = Physics.OverlapSphere(groundCheck.position, groundCheckRadius, groundLayer);
@@ -65,6 +75,8 @@ public class TestPlayer : MonoBehaviour
                 p.direction = lookDirection;
                 Instantiate(p, rigidbody.position + lookDirection * 2f, Quaternion.identity);
                 shootCooldown = true;
+                audioSource.clip = shootSound;
+                audioSource.Play();
             }
         }
     }
@@ -101,6 +113,8 @@ public class TestPlayer : MonoBehaviour
 
         if (x.CompareTag("Collectible"))
         {
+            audioSource.clip = pickupSound;
+            audioSource.Play();
             Destroy(x.gameObject);
         }
     }
