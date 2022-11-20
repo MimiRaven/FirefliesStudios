@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestPlayer : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class TestPlayer : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip shootSound;
     public AudioClip pickupSound;
+
+    public GameObject lightingObj;
+    public GameObject playerlight;
+    public int lightLives = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -72,11 +77,21 @@ public class TestPlayer : MonoBehaviour
             if (lookDirection.x > 0 || lookDirection.x < 0)
             {
                 Projectile p = projectileObject.GetComponent<Projectile>();
+                Lighting l = lightingObj.GetComponent<Lighting>();
+                Light pl = playerlight.GetComponent<Light>();
+
+                l.DecreaseLight();
+                LivesChange(-1);
                 p.direction = lookDirection;
                 Instantiate(p, rigidbody.position + lookDirection * 2f, Quaternion.identity);
                 shootCooldown = true;
                 audioSource.clip = shootSound;
                 audioSource.Play();
+
+                if (pl.intensity > 0f)
+                {
+                    pl.intensity -= 0.1f;
+                }
             }
         }
     }
@@ -113,9 +128,46 @@ public class TestPlayer : MonoBehaviour
 
         if (x.CompareTag("Collectible"))
         {
-            audioSource.clip = pickupSound;
-            audioSource.Play();
-            Destroy(x.gameObject);
+            Lighting l = lightingObj.GetComponent<Lighting>();
+            Light pl = playerlight.GetComponent<Light>();
+
+            if (lightLives < 10)
+            {
+                LivesChange(1);
+                l.IncreaseLight();
+                audioSource.clip = pickupSound;
+                audioSource.Play();
+                Destroy(x.gameObject);
+
+                if (pl.intensity < 1.0f)
+                {
+                    pl.intensity += 0.1f;
+                }
+            }
+        }
+
+        if (x.CompareTag("Enemy"))
+        {
+            Lighting l = lightingObj.GetComponent<Lighting>();
+            Light pl = playerlight.GetComponent<Light>();
+
+            LivesChange(-1);
+            l.DecreaseLight();
+
+            if (pl.intensity >= 0.1f)
+            {
+                pl.intensity -= 0.1f;
+            }
+        }
+    }
+
+    void LivesChange(int x)
+    {
+        lightLives += x;
+
+        if (lightLives <= 0)
+        {
+            SceneManager.LoadScene("MainMenu"); // Change to GameOver scene
         }
     }
 }

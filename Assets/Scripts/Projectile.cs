@@ -15,6 +15,17 @@ public class Projectile : MonoBehaviour
     void Update()
     { 
         rb.AddForce(new Vector3 (direction.x, direction.y + 0.5f, direction.z) * 50f);
+
         Destroy(gameObject, 1f);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+
+            Destroy(gameObject);
+        }
     }
 }

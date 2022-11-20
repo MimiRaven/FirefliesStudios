@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8476220887883452119}
   - component: {fileID: 2949464072496655843}
   - component: {fileID: 3372108527884132359}
+  - component: {fileID: 6134878069643913056}
   m_Layer: 0
   m_Name: GroundEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6134878069643913056
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164593849860159927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 32.233665, y: 30.640322, z: 32.219547}
+  m_Center: {x: 0.23447873, y: -15.320183, z: -0.017602379}
