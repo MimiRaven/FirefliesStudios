@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Final Level");
+        SceneManager.LoadScene("UpdateLevel");
     }
 
     public void LoadAboutScreen()
