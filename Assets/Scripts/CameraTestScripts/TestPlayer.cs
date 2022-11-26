@@ -16,6 +16,7 @@ public class TestPlayer : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
     public float jumpHeight;
+    public PauseMenu lightBar;
 
     public GameObject projectileObject;
     public float shootCooldownTimer = 2;
@@ -36,6 +37,7 @@ public class TestPlayer : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        lightBar.SetLight(lightLives);
     }
 
     // Update is called once per frame
@@ -164,6 +166,8 @@ public class TestPlayer : MonoBehaviour
     void LivesChange(int x)
     {
         lightLives += x;
+
+        lightBar.SetLight(lightLives);
 
         if (lightLives <= 0)
         {

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu: MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public Slider slider;
     public GameObject pauseMenuUI;
     public GameObject HUDMenuUI;
 
@@ -46,6 +47,11 @@ public class PauseMenu: MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
+    }
+
+    public void SetLight(int light)
+    {
+        slider.value = light;
     }
 
     public void QuitGame()
