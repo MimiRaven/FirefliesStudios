@@ -28,8 +28,7 @@ public class TestPlayer : MonoBehaviour
     public AudioClip shootSound;
     public AudioClip pickupSound;
 
-    public GameObject lightingObj;
-    public GameObject playerlight;
+    public GameObject spotLight;
     public int lightLives = 3;
 
     // Start is called before the first frame update
@@ -79,10 +78,8 @@ public class TestPlayer : MonoBehaviour
             if (lookDirection.x > 0 || lookDirection.x < 0)
             {
                 Projectile p = projectileObject.GetComponent<Projectile>();
-                Lighting l = lightingObj.GetComponent<Lighting>();
-                Light pl = playerlight.GetComponent<Light>();
+                Light pl = spotLight.GetComponent<Light>();
 
-                l.DecreaseLight();
                 LivesChange(-1);
                 p.direction = lookDirection;
                 Instantiate(p, rigidbody.position + lookDirection * 2f, Quaternion.identity);
@@ -90,9 +87,9 @@ public class TestPlayer : MonoBehaviour
                 audioSource.clip = shootSound;
                 audioSource.Play();
 
-                if (pl.intensity > 0f)
+                if (pl.spotAngle > 0f)
                 {
-                    pl.intensity -= 0.1f;
+                    pl.spotAngle -= 10f;
                 }
             }
         }
@@ -130,35 +127,31 @@ public class TestPlayer : MonoBehaviour
 
         if (x.CompareTag("Collectible"))
         {
-            Lighting l = lightingObj.GetComponent<Lighting>();
-            Light pl = playerlight.GetComponent<Light>();
+            Light pl = spotLight.GetComponent<Light>();
 
             if (lightLives < 10)
             {
                 LivesChange(1);
-                l.IncreaseLight();
                 audioSource.clip = pickupSound;
                 audioSource.Play();
                 Destroy(x.gameObject);
 
-                if (pl.intensity < 1.0f)
+                if (pl.spotAngle < 100f)
                 {
-                    pl.intensity += 0.1f;
+                    pl.spotAngle += 10f;
                 }
             }
         }
 
         if (x.CompareTag("Enemy"))
         {
-            Lighting l = lightingObj.GetComponent<Lighting>();
-            Light pl = playerlight.GetComponent<Light>();
+            Light pl = spotLight.GetComponent<Light>();
 
             LivesChange(-1);
-            l.DecreaseLight();
 
-            if (pl.intensity >= 0.1f)
+            if (pl.spotAngle >= 0f)
             {
-                pl.intensity -= 0.1f;
+                pl.spotAngle -= 10f;
             }
         }
     }
@@ -168,6 +161,16 @@ public class TestPlayer : MonoBehaviour
         lightLives += x;
 
         lightBar.SetLight(lightLives);
+
+        if (lightLives >= 10)
+        {
+            RenderSettings.ambientIntensity = 0.5f;
+        }
+
+        else if (lightLives < 10)
+        {
+            RenderSettings.ambientIntensity = 0.15f;
+        }
 
         if (lightLives <= 0)
         {
