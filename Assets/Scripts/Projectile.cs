@@ -12,10 +12,22 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
-    { 
-        rb.AddForce(new Vector3 (direction.x, direction.y + 0.5f, direction.z) * 50f);
 
+    void Update()
+    {
+        GameObject p = GameObject.FindWithTag("Player");
+        TestPlayer tp = p.GetComponent<TestPlayer>();
+
+        switch(tp.looking)
+        {
+            case TestPlayer.lookDir.right:
+                rb.AddForce(new Vector3(50, direction.y + 1f, direction.z) * 10f);
+                break;
+            case TestPlayer.lookDir.left:
+                rb.AddForce(new Vector3(-50, direction.y + 1f, direction.z) * 10f);
+                break;
+
+        }
         Destroy(gameObject, 1f);
     }
 

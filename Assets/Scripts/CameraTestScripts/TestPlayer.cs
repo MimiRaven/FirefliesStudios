@@ -31,6 +31,9 @@ public class TestPlayer : MonoBehaviour
     public GameObject spotLight;
     public int lightLives = 3;
 
+    public enum lookDir { left, right };
+    public lookDir looking;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,24 +76,32 @@ public class TestPlayer : MonoBehaviour
 
         lookDirection.x = move;
 
+        if (lookDirection.x > 0)
+        {
+            looking = lookDir.right;
+        }
+
+        if (lookDirection.x < 0)
+        {
+            looking = lookDir.left;
+        }
+
         if (shootCooldown == false && Input.GetAxis("Fire1") > 0)
         {
-            if (lookDirection.x > 0 || lookDirection.x < 0)
+
+            Projectile p = projectileObject.GetComponent<Projectile>();
+            Light pl = spotLight.GetComponent<Light>();
+
+            LivesChange(-1);
+            p.direction = lookDirection;
+            Instantiate(p, rigidbody.position + lookDirection * 2f, Quaternion.identity);
+            shootCooldown = true;
+            audioSource.clip = shootSound;
+            audioSource.Play();
+
+            if (pl.spotAngle > 0f)
             {
-                Projectile p = projectileObject.GetComponent<Projectile>();
-                Light pl = spotLight.GetComponent<Light>();
-
-                LivesChange(-1);
-                p.direction = lookDirection;
-                Instantiate(p, rigidbody.position + lookDirection * 2f, Quaternion.identity);
-                shootCooldown = true;
-                audioSource.clip = shootSound;
-                audioSource.Play();
-
-                if (pl.spotAngle > 0f)
-                {
-                    pl.spotAngle -= 10f;
-                }
+                pl.spotAngle -= 10f;
             }
         }
     }
