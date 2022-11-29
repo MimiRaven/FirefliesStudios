@@ -185,7 +185,7 @@ public class TestPlayer : MonoBehaviour
 
         if (lightLives <= 0)
         {
-            SceneManager.LoadScene("MainMenu"); // Change to GameOver scene
+            SceneManager.LoadScene("LoseScreen"); // Change to GameOver scene
         }
     }
 }

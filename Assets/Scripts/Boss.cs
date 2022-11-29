@@ -27,7 +27,7 @@ public class Boss : Enemy
         {
             Destroy(gameObject);
 
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }
