@@ -16,6 +16,7 @@ TagManager:
   - Collectible
   - Enemy
   - Boss
+  - TriggerBoss
   layers:
   - Default
   - TransparentFX

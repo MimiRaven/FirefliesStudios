@@ -17,6 +17,7 @@ public class TestPlayer : MonoBehaviour
     public Transform groundCheck;
     public float jumpHeight;
     public PauseMenu lightBar;
+    public GameObject BossHealthUI;
 
     public GameObject projectileObject;
     public float shootCooldownTimer = 2;
@@ -134,9 +135,22 @@ public class TestPlayer : MonoBehaviour
             case "RotateRight4":
                 FindObjectOfType<Turntable>().RotateRight4();
                 break;
+            case "TriggerBoss":
+                BossHealthUI.SetActive(true);
+                break;
         }
 
-        if (x.CompareTag("Collectible"))
+        void OnTriggerExit(Collider x)
+        {
+            switch (x.tag)
+            {
+                case "TriggerBoss":
+                    BossHealthUI.SetActive(false);
+                    break;
+            }
+        }
+
+            if (x.CompareTag("Collectible"))
         {
             Light pl = spotLight.GetComponent<Light>();
 

@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu: MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public Slider slider;
+    public Slider lightSlider;
+    public Slider healthSlider;
     public GameObject pauseMenuUI;
     public GameObject HUDMenuUI;
 
@@ -51,7 +52,12 @@ public class PauseMenu: MonoBehaviour
 
     public void SetLight(int light)
     {
-        slider.value = light;
+        lightSlider.value = light;
+    }
+
+    public void SetBossHealth(int bosslives)
+    {
+        healthSlider.value = bosslives;
     }
 
     public void QuitGame()
