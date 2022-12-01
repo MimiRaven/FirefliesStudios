@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ebe5f0c696743b4d99e6d986301339b
+guid: 6b084dac31f81894593204648f6c22e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walkSpritesheet_0
+      name: Final_Boss_Idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 66
-        height: 66
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a231b735e4b6414a85f3d72eec6ec4a
-      internalID: 395172692
+      spriteID: c1370478fc2d80241ba5e5cdf8bd62b9
+      internalID: 1357238129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkSpritesheet_1
+      name: Final_Boss_Idle_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 66
-        width: 66
-        height: 66
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0524bd64a350de1418e57f3cce392a7e
-      internalID: -1334740693
+      spriteID: 626efa0d9c2715042897841298dc1b53
+      internalID: 1334493356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkSpritesheet_2
+      name: Final_Boss_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbe36abe4e9d5045a08bd63833e911f
+      internalID: 722111325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Final_Boss_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425670d92edc6f34ba9641111614f3a0
+      internalID: 687900912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Final_Boss_Idle_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 66
-        height: 66
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 559514700b218ae4aa38df1c1ea2d95c
-      internalID: -627209862
+      spriteID: 358662e0735ddd847abd213b2b451ccb
+      internalID: 1784480969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkSpritesheet_3
+      name: Final_Boss_Idle_5
       rect:
         serializedVersion: 2
-        x: 66
+        x: 256
         y: 0
-        width: 66
-        height: 66
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 464e7f631ec3ff144a60912ab44fbbd7
-      internalID: 283906970
+      spriteID: 9544f831e3fd8e74998d7e55cd2f5462
+      internalID: -1955035534
       vertices: []
       indices: 
       edges: []
@@ -190,7 +232,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7395787e110326e47be2d52ed8417389
+    spriteID: 7c443b05d87bf9748a986b80b2afb492
     internalID: 0
     vertices: []
     indices: 
@@ -198,10 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walkSpritesheet_0: 395172692
-      walkSpritesheet_1: -1334740693
-      walkSpritesheet_3: 283906970
-      walkSpritesheet_2: -627209862
+      Final_Boss_Idle_2: 722111325
+      Final_Boss_Idle_5: -1955035534
+      Final_Boss_Idle_4: 1784480969
+      Final_Boss_Idle_0: 1357238129
+      Final_Boss_Idle_3: 687900912
+      Final_Boss_Idle_1: 1334493356
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
