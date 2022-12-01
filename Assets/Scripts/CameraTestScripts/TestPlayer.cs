@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,8 @@ public class TestPlayer : MonoBehaviour
 
     Rigidbody rigidbody;
     Vector3 lookDirection = Vector3.left;
+
+    private Vector3 direction;
 
     bool grounded = false;
     Collider[] groundCollisions;
@@ -31,6 +34,8 @@ public class TestPlayer : MonoBehaviour
 
     public GameObject spotLight;
     public int lightLives = 3;
+
+    public int Amountofjumps = 2;
 
     public enum lookDir { left, right };
     public lookDir looking;
@@ -63,6 +68,7 @@ public class TestPlayer : MonoBehaviour
         {
             grounded = false;
             rigidbody.AddForce(new Vector3(0, jumpHeight, 0));
+            Amountofjumps++;
             audioSource.clip = jumpSound;
             audioSource.Play();
         }
