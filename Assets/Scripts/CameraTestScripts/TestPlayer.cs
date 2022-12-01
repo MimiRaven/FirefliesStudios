@@ -140,6 +140,12 @@ public class TestPlayer : MonoBehaviour
                 break;
         }
 
+        if (CompareTag(x.tag))
+        {
+            Transform transform = GetComponent<Transform>();
+            //transform.position = new Vector3(0,0.5f,-16f);
+        }
+
         void OnTriggerExit(Collider x)
         {
             switch (x.tag)
