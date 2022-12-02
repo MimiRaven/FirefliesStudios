@@ -40,12 +40,15 @@ public class TestPlayer : MonoBehaviour
     public enum lookDir { left, right };
     public lookDir looking;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         lightBar.SetLight(lightLives);
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class TestPlayer : MonoBehaviour
     {
         if (grounded && Input.GetAxis("Jump") > 0)
         {
+            animator.SetTrigger("Jump");
             grounded = false;
             rigidbody.AddForce(new Vector3(0, jumpHeight, 0));
             Amountofjumps++;
@@ -79,17 +83,22 @@ public class TestPlayer : MonoBehaviour
 
         float move = Input.GetAxis("Horizontal");
 
+        float absVelocity;
         rigidbody.velocity = new Vector3(move * runSpeed, rigidbody.velocity.y, 0);
+        absVelocity = Mathf.Abs(rigidbody.velocity.x);
+        animator.SetFloat("Speed", absVelocity);
 
         lookDirection.x = move;
 
         if (lookDirection.x > 0)
         {
+            animator.SetFloat("Move X", 1);
             looking = lookDir.right;
         }
 
         if (lookDirection.x < 0)
         {
+            animator.SetFloat("Move X", -1);
             looking = lookDir.left;
         }
 
@@ -146,23 +155,7 @@ public class TestPlayer : MonoBehaviour
                 break;
         }
 
-        if (CompareTag(x.tag))
-        {
-            Transform transform = GetComponent<Transform>();
-            //transform.position = new Vector3(0,0.5f,-16f);
-        }
-
-        void OnTriggerExit(Collider x)
-        {
-            switch (x.tag)
-            {
-                case "TriggerBoss":
-                    BossHealthUI.SetActive(false);
-                    break;
-            }
-        }
-
-            if (x.CompareTag("Collectible"))
+        if (x.CompareTag("Collectible"))
         {
             Light pl = spotLight.GetComponent<Light>();
 
@@ -190,6 +183,16 @@ public class TestPlayer : MonoBehaviour
             {
                 pl.spotAngle -= 10f;
             }
+        }
+    }
+
+    void OnTriggerExit(Collider x)
+    {
+        switch (x.tag)
+        {
+            case "TriggerBoss":
+                BossHealthUI.SetActive(false);
+                break;
         }
     }
 
