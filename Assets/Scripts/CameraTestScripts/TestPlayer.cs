@@ -201,7 +201,7 @@ public class TestPlayer : MonoBehaviour
         }
     }
 
-    void LivesChange(int x)
+    public void LivesChange(int x)
     {
         lightLives += x;
 
