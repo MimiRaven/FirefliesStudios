@@ -11,6 +11,7 @@ public class Boss : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         healthBar.SetBossHealth(health);
     }
 
@@ -23,14 +24,20 @@ public class Boss : Enemy
     public void DealDamage(int x)
     {
         health += x;
-
+        anim.SetTrigger("Hit");
         healthBar.SetBossHealth(health);
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            anim.SetBool("Dead", true);
+            //Destroy(gameObject);
 
-            SceneManager.LoadScene("WinScreen");
+            Invoke("GameOver", 3f);
         }
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("WinScreen");
+    }    
 }

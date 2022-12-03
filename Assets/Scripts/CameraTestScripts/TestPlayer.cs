@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -69,7 +69,7 @@ public class TestPlayer : MonoBehaviour
     {
         if (grounded && Input.GetAxis("Jump") > 0)
         {
-            animator.SetTrigger("Jump");
+            animator.SetBool("Jump", true);
             grounded = false;
             rigidbody.AddForce(new Vector3(0, jumpHeight, 0));
             Amountofjumps++;
@@ -78,7 +78,11 @@ public class TestPlayer : MonoBehaviour
         }
 
         groundCollisions = Physics.OverlapSphere(groundCheck.position, groundCheckRadius, groundLayer);
-        if (groundCollisions.Length > 0) grounded = true;
+        if (groundCollisions.Length > 0)
+        {
+            animator.SetBool("Jump", false);
+            grounded = true;
+        }
         else grounded = false;
 
         float move = Input.GetAxis("Horizontal");
@@ -104,7 +108,7 @@ public class TestPlayer : MonoBehaviour
 
         if (shootCooldown == false && Input.GetAxis("Fire1") > 0)
         {
-
+            animator.SetTrigger("Shoot");
             Projectile p = projectileObject.GetComponent<Projectile>();
             Light pl = spotLight.GetComponent<Light>();
 
@@ -183,6 +187,7 @@ public class TestPlayer : MonoBehaviour
             {
                 pl.spotAngle -= 10f;
             }
+            animator.SetTrigger("Hurt");
         }
     }
 
