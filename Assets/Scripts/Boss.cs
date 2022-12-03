@@ -24,7 +24,7 @@ public class Boss : Enemy
     {
         health += x;
 
-        healthBar.SetBossHealth(x);
+        healthBar.SetBossHealth(health);
 
         if (health <= 0)
         {
