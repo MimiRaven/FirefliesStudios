@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4792166544327120122}
   - component: {fileID: 3924111474524011246}
   - component: {fileID: 3901319562578120204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FlyingEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61,8 +61,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.225363, y: 12.685254, z: 16.376673}
-  m_Center: {x: -0.15973754, y: -2.0630639, z: 7.9038415}
+  m_Size: {x: 16.225363, y: 21.547672, z: 20.299387}
+  m_Center: {x: -0.15973741, y: -1.5966877, z: 5.9424844}
 --- !u!212 &4792166544327120122
 SpriteRenderer:
   m_ObjectHideFlags: 0

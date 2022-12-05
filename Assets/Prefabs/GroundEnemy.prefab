@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6297187302795558580}
   - component: {fileID: 2546845369717030959}
   - component: {fileID: 8980125888801339343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61,8 +61,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.9693956, y: 6.719441, z: 22.53635}
-  m_Center: {x: 0.38258576, y: 0.33946285, z: 4.8239985}
+  m_Size: {x: 7.9693956, y: 13.657303, z: 22.53635}
+  m_Center: {x: 0.38258585, y: 2.2922134, z: 4.823998}
 --- !u!212 &6297187302795558580
 SpriteRenderer:
   m_ObjectHideFlags: 0

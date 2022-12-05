@@ -45,6 +45,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(90, Vector3.up);
         targetPosition += new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnLeft1.SetActive(false);
         TurnRight4.SetActive(false);
         TurnLeft2.SetActive(true);
@@ -55,6 +57,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(90, Vector3.up);
         targetPosition += new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnLeft2.SetActive(false);
         TurnRight1.SetActive(false);
         TurnLeft3.SetActive(true);
@@ -65,6 +69,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(90, Vector3.up);
         targetPosition += new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnLeft3.SetActive(false);
         TurnRight2.SetActive(false);
         TurnLeft4.SetActive(true);
@@ -75,6 +81,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(90, Vector3.up);
         targetPosition += new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnLeft4.SetActive(false);
         TurnRight3.SetActive(false);
         TurnLeft1.SetActive(true);
@@ -85,6 +93,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(-90, Vector3.up);
         targetPosition -= new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnRight1.SetActive(false);
         TurnLeft2.SetActive(false);
         TurnLeft1.SetActive(true);
@@ -95,6 +105,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(-90, Vector3.up);
         targetPosition -= new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnRight2.SetActive(false);
         TurnLeft3.SetActive(false);
         TurnLeft2.SetActive(true);
@@ -105,6 +117,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(-90, Vector3.up);
         targetPosition -= new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnRight3.SetActive(false);
         TurnLeft4.SetActive(false);
         TurnLeft3.SetActive(true);
@@ -115,6 +129,8 @@ public class Turntable : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(-90, Vector3.up);
         targetPosition -= new Vector3(moveDistance, 0, 0);
+        //transform.rotation = targetRotation;
+        //transform.position = targetPosition;
         TurnRight4.SetActive(false);
         TurnLeft1.SetActive(false);
         TurnLeft4.SetActive(true);
