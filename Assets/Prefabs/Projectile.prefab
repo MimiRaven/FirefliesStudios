@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1649049693728280285}
   - component: {fileID: 5174219614842160450}
   - component: {fileID: 1432615117250737622}
+  - component: {fileID: 259737553441594069}
   m_Layer: 6
   m_Name: Projectile
   m_TagString: Projectile
@@ -130,6 +131,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &259737553441594069
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645416876139685729}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ecde477320d5cd14f8191931c79b396f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7130980797414540558
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,9 +6,11 @@ public class Projectile : MonoBehaviour
 {
     Rigidbody rb;
     public Vector3 direction;
+    Animator anim;
 
     void Awake()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -22,12 +24,15 @@ public class Projectile : MonoBehaviour
         {
             case TestPlayer.lookDir.right:
                 rb.AddForce(new Vector3(50, direction.y + 1f, direction.z) * 10f);
+                anim.SetFloat("Blend", 1);
                 break;
             case TestPlayer.lookDir.left:
                 rb.AddForce(new Vector3(-50, direction.y + 1f, direction.z) * 10f);
+                anim.SetFloat("Blend", -1);
                 break;
 
         }
+
         Destroy(gameObject, 1f);
     }
 
